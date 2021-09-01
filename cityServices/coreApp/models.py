@@ -19,7 +19,7 @@ class CategoyModel(models.Model):
     name = models.CharField(max_length=100, unique=True)
     thumbnail = ResizedImageField(size=[400, 400], quality=75,
                             crop=['middle', 'center'],
-                            upload_to='musics/thumbnails',
+                            upload_to='categories/thumbnails',
                             null=True, blank=True)
     class Meta:
         verbose_name = 'Category'
@@ -51,9 +51,9 @@ class BusinessProfileModel(models.Model):
     business_description = models.TextField(max_length=2000, blank=True, null=True, help_text='Tell us more about your business...')
     is_verified = models.BooleanField(default=False)
     category = models.ManyToManyField(CategoyModel)
-    thumbnail = ResizedImageField(size=[400, 400], quality=75,
+    thumbnail = ResizedImageField(size=[400, 300], quality=75,
                                 crop=['middle', 'center'],
-                                upload_to='musics/thumbnails',
+                                upload_to='businesses/thumbnails',
                                 null=True, blank=True)
     # thumbnail = models.ImageField(upload_to='thumbnails/images', null=True, blank=True) #TODO: require attention # default='img/profile.png')
     landmark = models.CharField(max_length=200, blank=True, null=True)
@@ -66,7 +66,7 @@ class BusinessProfileModel(models.Model):
     registered_on = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(max_length=80, unique=True)
     amenities = models.ManyToManyField(AmenitiesModel,)
-    
+    status = models.CharField(choices=(('O', 'Open'), ('C', 'Closed'),), max_length=1, default='C')
     class Meta:
         verbose_name = 'Business'
         verbose_name_plural = 'Businesses'

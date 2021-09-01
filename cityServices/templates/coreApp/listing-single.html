@@ -1,3 +1,5 @@
+{% load static%}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,26 +11,25 @@
     <title>Directro - Directory and Listing Template</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" href="{% static 'coreApp/images/favicon.ico' %}" />
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap">
 
     <!-- CSS Global Compulsory (Do not remove)-->
-    <link rel="stylesheet" href="css/font-awesome/all.min.css" />
-    <link rel="stylesheet" href="css/flaticon/flaticon.css" />
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="{% static 'coreApp/css/font-awesome/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'coreApp/css/flaticon/flaticon.css' %}" />
+    <link rel="stylesheet" href="{% static 'coreApp/css/bootstrap/bootstrap.min.css' %}" />
 
-    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
-    <link rel="stylesheet" href="css/select2/select2.css" />
-    <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/magnific-popup/magnific-popup.css" />
-    <link rel="stylesheet" href="css/slick/slick-theme.css" />
-    <link rel="stylesheet" href="css/datetimepicker/datetimepicker.min.css" />
-    <link rel="stylesheet" href="css/range-slider/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="{% static 'coreApp/css/select2/select2.css' %}" />
+    <link rel="stylesheet" href="{% static 'coreApp/css/owl-carousel/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'coreApp/css/magnific-popup/magnific-popup.css' %}" />
+    <link rel="stylesheet" href="{% static 'coreApp/css/slick/slick-theme.css' %}" />
+    <link rel="stylesheet" href="{% static 'coreApp/css/datetimepicker/datetimepicker.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'coreApp/css/range-slider/ion.rangeSlider.css' %}" />
 
     <!-- Template Style -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{% static 'coreApp/css/style.css' %}" />
 
   </head>
 
@@ -41,7 +42,7 @@ header -->
         <div class="container-fluid">
           <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse"><i class="fas fa-align-left"></i></button>
           <a class="navbar-brand" href="index.html">
-            <img class="img-fluid" src="images/logo-dark.svg" alt="logo">
+            <img class="img-fluid" src="{% static 'coreApp/images/logo-dark.svg' %}" alt="logo">
           </a>
           <div class="navbar-collapse collapse justify-content-start">
             <ul class="nav navbar-nav">
@@ -303,30 +304,30 @@ Listing single -->
       <div class="col-lg-7">
         <div class="slider-slick">
           <div class="slider slider-for">
-              <img class="img-fluid" src="images/gallery/01.jpg" alt="">
-              <img class="img-fluid" src="images/gallery/02.jpg" alt="">
-              <img class="img-fluid" src="images/gallery/03.jpg" alt="">
-              <img class="img-fluid" src="images/gallery/04.jpg" alt="">
-              <img class="img-fluid" src="images/gallery/05.jpg" alt="">
-              <img class="img-fluid" src="images/gallery/06.jpg" alt="">
-              <img class="img-fluid" src="images/gallery/07.jpg" alt="">
-              <img class="img-fluid" src="images/gallery/08.jpg" alt="">
+              <img class="img-fluid" src="{{business.thumbnail.url}}" alt="">
+              <img class="img-fluid" src="{% static 'coreApp/images/gallery/02.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'coreApp/images/gallery/03.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'coreApp/images/gallery/04.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'coreApp/images/gallery/05.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'coreApp/images/gallery/06.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'coreApp/images/gallery/07.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'coreApp/images/gallery/08.jpg' %}" alt="">
             </div>
             <div class="slider slider-nav d-none d-sm-block">
-              <img class="img-fluid" src="images/gallery/01.jpg" alt="">
-              <img class="img-fluid" src="images/gallery/02.jpg" alt="">
-              <img class="img-fluid" src="images/gallery/03.jpg" alt="">
-              <img class="img-fluid" src="images/gallery/04.jpg" alt="">
-              <img class="img-fluid" src="images/gallery/05.jpg" alt="">
-              <img class="img-fluid" src="images/gallery/06.jpg" alt="">
-              <img class="img-fluid" src="images/gallery/07.jpg" alt="">
-              <img class="img-fluid" src="images/gallery/08.jpg" alt="">
+              <img class="img-fluid" src="{{business.thumbnail.url}}" alt="">
+              <img class="img-fluid" src="{% static 'coreApp/images/gallery/02.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'coreApp/images/gallery/03.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'coreApp/images/gallery/04.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'coreApp/images/gallery/05.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'coreApp/images/gallery/06.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'coreApp/images/gallery/07.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'coreApp/images/gallery/08.jpg' %}" alt="">
             </div>
         </div>
       </div>
       <div class="col-lg-5 mt-3 mt-lg-0">
-        <h2>Honey Restaurant <i class="fas fa-check-circle text-success pl-3"></i></h2>
-        <a class="listing-loaction text-dark mb-3 d-block" href="#"> <i class="fas fa-map-marker-alt pr-2 text-primary"></i> West Division Street</a>
+        <h2>{{business.business_name}}{% if business.is_verified %} <i class="fas fa-check-circle text-success pl-3"></i> {% endif %}</h2>
+        <a class="listing-loaction text-dark mb-3 d-block" href="#"> <i class="fas fa-map-marker-alt pr-2 text-primary"></i>{{business.landmark}}, {{business.area_local}}</a>
          <div class="d-flex ">
               <span class="px-2 border text-success border-success border-radius d-inline-block mr-2">4.0</span>
               <ul class="list-unstyled d-flex mb-0">
@@ -341,12 +342,12 @@ Listing single -->
           <div class="call-animation">
             <i class="fas fa-phone rounded-circle fa-flip-horizontal bg-primary p-4 d-inline-block text-white"></i>
           </div>
-          <h6 class="pl-3 mb-0"><span class="text-primary">Call now</span> (123) 345-6789</h6>
+          <h6 class="pl-3 mb-0"><span class="text-primary">Call now : </span><a href="tel:+91{{business.mobile}}"> +91 {{business.mobile}}</a></h6>
         </div>
-        <p>If success is a process with a number of defined steps, then it is just like any other process. So, what is the first step in any process?</p>
-        <a class="btn btn-success" href="#"> <i class="far fa-check-circle pr-2"></i> Verified Listing</a>
-      <h3 class="h2 d-block mb-2 mt-4 text-primary"> $$,$$$</h3>
-      <span>Plus Taxes</span>
+        <p>{{business.business_description}}</p>
+        <!-- <a class="btn btn-success" href="#"> <i class="far fa-check-circle pr-2"></i> Verified Listing</a> -->
+      <!-- <h3 class="h2 d-block mb-2 mt-4 text-primary"> $$,$$$</h3> -->
+      <!-- <span>Plus Taxes</span> -->
       </div>
     </div>
     <div class="row">
@@ -385,30 +386,14 @@ Listing single -->
           <div class="row">
             <div class="col-lg-4">
               <ul class="list-unstyled mb-lg-0 mb-3">
-                <li class="mb-3"> <i class="far fa-check-circle text-secondary mr-2"></i> High quality food</li>
-                <li class="mb-3"> <i class="far fa-check-circle text-secondary mr-2"></i> Dining experience</li>
-                <li class="mb-3"> <i class="far fa-check-circle text-secondary mr-2"></i> Cleanliness</li>
-                <li> <i class="far fa-check-circle text-secondary mr-2"></i> Price factor</li>
-              </ul>
-            </div>
-            <div class="col-lg-4">
-              <ul class="list-unstyled mb-lg-0 mb-3">
-                <li class="mb-3"> <i class="far fa-check-circle text-secondary mr-2"></i> Serve good drinks</li>
-                <li class="mb-3"> <i class="far fa-check-circle text-secondary mr-2"></i> Wifi</li>
-                <li class="mb-3"> <i class="far fa-check-circle text-secondary mr-2"></i> No Smoking</li>
-                <li> <i class="far fa-check-circle text-secondary mr-2"></i>  Air Conditioning</li>
-              </ul>
-            </div>
-            <div class="col-lg-4">
-              <ul class="list-unstyled mb-0">
-                <li class="mb-3"> <i class="far fa-check-circle text-secondary mr-2"></i> All drinks</li>
-                <li class="mb-3"> <i class="far fa-check-circle text-secondary mr-2"></i> Pets Friendly</li>
-                <li> <i class="far fa-check-circle text-secondary mr-2"></i> Wireless Internet</li>
+                {% for amenity in business.amenities.all %}
+                <li class="mb-3"> <i class="far fa-check-circle text-secondary mr-2"></i> {{ amenity.title }}</li>
+                {% endfor %}
               </ul>
             </div>
           </div>
         </div>
-        <div class="listing-detail-box mb-3">
+        <!-- <div class="listing-detail-box mb-3">
           <div class="detail-title">
             <h5>Listing Average Reviews</h5>
           </div>
@@ -492,13 +477,13 @@ Listing single -->
               </div>
             </div>
           </div>
-        </div>
-        <div class="listing-detail-box mb-3">
+        </div> -->
+        <!-- <div class="listing-detail-box mb-3">
           <div class="detail-title">
             <h5>Listing Location </h5>
           </div>
           <iframe style="width: 100%; height: 300px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373531590414!3d-37.817323442021134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sin!4v1559822357848!5m2!1sen!2sin"></iframe>
-        </div>
+        </div> -->
         <div class="listing-detail-box mb-3">
           <div class="detail-title">
             <h5>Listing 5 Reviews For Honey Restaurant</h5>
@@ -506,7 +491,7 @@ Listing single -->
           <div class="row border-bottom pb-4 mb-4">
             <div class="col-md-1">
               <div class="avatar avatar-lg">
-                <img src="images/avatar/01.jpg" class="img-fluid rounded-circle" alt="...">
+                <img src="{% static 'coreApp/images/avatar/01.jpg' %}" class="img-fluid rounded-circle" alt="...">
               </div>
             </div>
             <div class="col-md-11">
@@ -536,7 +521,7 @@ Listing single -->
           <div class="row border-bottom pb-4 mb-4">
             <div class="col-md-1">
               <div class="avatar avatar-lg">
-                <img src="images/avatar/02.jpg" class="img-fluid rounded-circle" alt="...">
+                <img src="{% static 'coreApp/images/avatar/02.jpg' %}" class="img-fluid rounded-circle" alt="...">
               </div>
             </div>
             <div class="col-md-11">
@@ -557,13 +542,13 @@ Listing single -->
                 <p>Along with your plans, you should consider developing an action orientation that will keep you motivated to move forward at all times This requires a little.</p>
                 <div class="row mb-3">
                   <div class="col-md-2 col-sm-3 mb-3 mb-sm-0">
-                    <img class="img-fluid border-radius" src="images/listing/grid/01.jpg" alt="">
+                    <img class="img-fluid border-radius" src="{% static 'coreApp/images/listing/grid/01.jpg' %}" alt="">
                   </div>
                   <div class="col-md-2 col-sm-3 mb-3 mb-sm-0">
-                    <img class="img-fluid border-radius" src="images/listing/grid/02.jpg" alt="">
+                    <img class="img-fluid border-radius" src="{% static 'coreApp/images/listing/grid/02.jpg' %}" alt="">
                   </div>
                   <div class="col-md-2 col-sm-3 mb-3 mb-sm-0">
-                    <img class="img-fluid border-radius" src="images/listing/grid/03.jpg" alt="">
+                    <img class="img-fluid border-radius" src="{% static 'coreApp/images/listing/grid/03.jpg' %}" alt="">
                   </div>
                 </div>
                 <div class="d-flex">
@@ -577,7 +562,7 @@ Listing single -->
           <div class="row">
             <div class="col-md-1">
               <div class="avatar avatar-lg">
-                <img src="images/avatar/03.jpg" class="img-fluid rounded-circle" alt="...">
+                <img src="{% static 'coreApp/images/avatar/03.jpg' %}" class="img-fluid rounded-circle" alt="...">
               </div>
             </div>
             <div class="col-md-11">
@@ -733,13 +718,9 @@ Listing single -->
           </div>
           <div class="widget-content">
             <ul class="list-unstyled mb-0">
-              <li class="mb-2 d-flex"><strong class="text-dark d-inline-block mr-2">Monday:</strong> <span class="ml-auto"> 06:00 - 05:00</span></li>
-              <li class="mb-2 d-flex"><strong class="text-dark d-inline-block mr-2">Tuesday:</strong> <span class="ml-auto"> 06:00 - 05:00</span></li>
-              <li class="mb-2 d-flex"><strong class="text-dark d-inline-block mr-2">Wednesday:</strong> <span class="ml-auto"> 06:00 - 05:00</span></li>
-              <li class="mb-2 d-flex"><strong class="text-dark d-inline-block mr-2">Thursday:</strong> <span class="ml-auto"> 06:00 - 05:00</span></li>
-              <li class="mb-2 d-flex"><strong class="text-dark d-inline-block mr-2">Friday:</strong> <span class="ml-auto"> 06:00 - 05:00</span></li>
-              <li class="mb-2 d-flex"><strong class="text-dark d-inline-block mr-2">Saturday:</strong> <span class="ml-auto"> 06:00 - 05:00</span></li>
-              <li class="mb-2 d-flex"><strong class="text-dark d-inline-block mr-2">Sunday:</strong> <span class="ml-auto"> 06:00 - 05:00</span></li>
+              {% for day in opening_hours %}
+                <li class="mb-2 d-flex"><strong class="text-dark d-inline-block mr-2">{{ day.get_weekday_display }}:</strong> <span class="ml-auto"> {{ day.start_time }} - {{ day.end_time }}</span></li>
+              {% endfor %}
             </ul>
           </div>
         </div>
@@ -795,28 +776,28 @@ Listing single -->
           </div>
           <div class="widget-content">
             <div class="recent-list-item d-flex mb-3">
-              <img class="img-fluid w-25" src="images/listing/grid/01.jpg" alt="">
+              <img class="img-fluid w-25" src="{% static 'coreApp/images/listing/grid/01.jpg' %}" alt="">
               <div class="recent-list-item-info ml-3">
                 <a class="address text-dark mb-2 d-block" href="#">Espresso macchiato</a>
                 <span class="text-primary">$$,$$$ </span>
               </div>
             </div>
             <div class="recent-list-item d-flex mb-3">
-              <img class="img-fluid w-25" src="images/listing/grid/02.jpg" alt="">
+              <img class="img-fluid w-25" src="{% static 'coreApp/images/listing/grid/02.jpg' %}" alt="">
               <div class="recent-list-item-info ml-3">
                 <a class="address text-dark mb-2 d-block" href="#">Fantastic Fridaze</a>
                 <span class="text-primary">$$,$$$ </span>
               </div>
             </div>
             <div class="recent-list-item d-flex mb-3">
-              <img class="img-fluid w-25" src="images/listing/grid/03.jpg" alt="">
+              <img class="img-fluid w-25" src="{% static 'coreApp/images/listing/grid/03.jpg' %}" alt="">
               <div class="recent-list-item-info ml-3">
                 <a class="address text-dark mb-2 d-block" href="#">Bike Tours Hollywood</a>
                 <span class="text-primary">$$,$$$ </span>
               </div>
             </div>
             <div class="recent-list-item d-flex mb-3">
-              <img class="img-fluid w-25" src="images/listing/grid/04.jpg" alt="">
+              <img class="img-fluid w-25" src="{% static 'coreApp/images/listing/grid/04.jpg' %}" alt="">
               <div class="recent-list-item-info ml-3">
                 <a class="address text-dark mb-2 d-block" href="#">The Vatican Museums</a>
                 <span class="text-primary">$$,$$$ </span>
@@ -878,7 +859,7 @@ footer-->
     <div class="row">
       <div class="col-sm-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
         <div class="footer-contact-info">
-           <a href="index.html"><img class="img-fluid footer-logo" src="images/logo-dark.svg" alt="logo"></a>
+           <a href="index.html"><img class="img-fluid footer-logo" src="{% static 'coreApp/images/logo-dark.svg' %}" alt="logo"></a>
           <div class="contact-address mt-5 mr-5 pr-5">
             <div class="contact-item">
               <p class="font-weight-normal">6580 Allison Turnpike Creminfort, AL 32808</p>
@@ -971,21 +952,21 @@ Back To Top-->
 Javascript -->
 
   <!-- JS Global Compulsory (Do not remove)-->
-  <script src="js/jquery-3.5.1.min.js"></script>
-  <script src="js/popper/popper.min.js"></script>
-  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script src="{% static 'coreApp/js/jquery-3.5.1.min.js' %}"></script>
+  <script src="{% static 'coreApp/js/popper/popper.min.js' %}"></script>
+  <script src="{% static 'coreApp/js/bootstrap/bootstrap.min.js' %}"></script>
 
   <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
-  <script src="js/select2/select2.full.js"></script>
-  <script src="js/owl-carousel/owl.carousel.min.js"></script>
-  <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
-  <script src="js/datetimepicker/moment.min.js"></script>
-  <script src="js/range-slider/ion.rangeSlider.min.js"></script>
-  <script src="js/slick/slick.min.js"></script>
-  <script src="js/datetimepicker/datetimepicker.min.js"></script>
+  <script src="{% static 'coreApp/js/select2/select2.full.js' %}"></script>
+  <script src="{% static 'coreApp/js/owl-carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'coreApp/js/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'coreApp/js/datetimepicker/moment.min.js' %}"></script>
+  <script src="{% static 'coreApp/js/range-slider/ion.rangeSlider.min.js' %}"></script>
+  <script src="{% static 'coreApp/js/slick/slick.min.js' %}"></script>
+  <script src="{% static 'coreApp/js/datetimepicker/datetimepicker.min.js' %}"></script>
 
   <!-- Template Scripts (Do not remove)-->
-  <script src="js/custom.js"></script>
+  <script src="{% static 'coreApp/js/custom.js' %}"></script>
 
 </body>
 </html>

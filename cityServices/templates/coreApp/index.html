@@ -378,87 +378,17 @@ Category -->
       <div class="col-12">
         <div class="category">
           <ul class="list-unstyled mb-0">
+            {% for category in categories %}
             <li class="category-item-02">
-              <a href="#">
+              <a href="{% url 'coreApp:category_listing' name=category.name %}">
                 <div class="category-icon">
-                  <img class="img-fluid" src="{% static 'coreApp/images/category/01.jpg' %}" alt="">
+                  <img class="img-fluid" src="{%if category.thumbnail %} {{ category.thumbnail.url }} {% endif %}" alt="">
                 </div>
-                <h6 class="mb-0">Restaurant</h6>
-                <span>(22)</span>
+                <h6 class="mb-0">{{category.name}}</h6>
+                <!-- <span>({{ category | length }})</span> -->
               </a>
             </li>
-            <li class="category-item-02">
-              <a href="#">
-                <div class="category-icon">
-                  <img class="img-fluid" src="{% static 'coreApp/images/category/02.jpg' %}" alt="">
-                </div>
-                <h6 class="mb-0">Night life </h6>
-                <span>(16)</span>
-              </a>
-            </li>
-            <li class="category-item-02">
-              <a href="#">
-                <div class="category-icon">
-                  <img class="img-fluid" src="{% static 'coreApp/images/category/03.jpg' %}" alt="">
-                </div>
-                <h6 class="mb-0">Arts & Entertainment</h6>
-                <span>(08)</span>
-              </a>
-            </li>
-            <li class="category-item-02">
-              <a href="#">
-                <div class="category-icon">
-                  <img class="img-fluid" src="{% static 'coreApp/images/category/04.jpg' %}" alt="">
-                </div>
-                <h6 class="mb-0">Hotel</h6>
-                <span>(14)</span>
-              </a>
-            </li>
-            <li class="category-item-02">
-              <a href="#">
-                <div class="category-icon">
-                  <img class="img-fluid" src="{% static 'coreApp/images/category/05.jpg' %}" alt="">
-                </div>
-                <h6 class="mb-0">Club & Bars</h6>
-                <span>(23)</span>
-              </a>
-            </li>
-            <li class="category-item-02">
-              <a href="#">
-                <div class="category-icon">
-                  <img class="img-fluid" src="{% static 'coreApp/images/category/06.jpg' %}" alt="">
-                </div>
-                <h6 class="mb-0">Museum</h6>
-                <span>(10)</span>
-              </a>
-            </li>
-            <li class="category-item-02">
-              <a href="#">
-                <div class="category-icon">
-                  <img class="img-fluid" src="{% static 'coreApp/images/category/07.jpg' %}" alt="">
-                </div>
-                <h6 class="mb-0">Gym & Fiteness</h6>
-                <span>(05)</span>
-              </a>
-            </li>
-            <li class="category-item-02">
-              <a href="#">
-                <div class="category-icon">
-                  <img class="img-fluid" src="{% static 'coreApp/images/category/08.jpg' %}" alt="">
-                </div>
-                <h6 class="mb-0">Beauty & Spa</h6>
-                <span>(10)</span>
-              </a>
-            </li>
-            <li class="category-item-02">
-              <a href="#">
-                <div class="category-icon">
-                  <img class="img-fluid" src="{% static 'coreApp/images/category/09.jpg' %}" alt="">
-                </div>
-                <h6 class="mb-0">Shopping Mall</h6>
-                <span>(15)</span>
-              </a>
-            </li>
+            {% endfor %}
           </ul>
         </div>
       </div>
