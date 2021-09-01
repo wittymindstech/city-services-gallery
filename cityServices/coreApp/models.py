@@ -15,17 +15,47 @@ WEEKDAYS = (
     ('7','Sunday'),
 )
 
+class CategoyModel(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    thumbnail = ResizedImageField(size=[400, 400], quality=75,
+                            crop=['middle', 'center'],
+                            upload_to='musics/thumbnails',
+                            null=True, blank=True)
+    class Meta:
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
+
+    def __str__(self):
+        return self.name
+
 
 class AmenitiesModel(models.Model):
     title = models.CharField(max_length=100)
+    
+    class Meta:
+        verbose_name = 'Amenity'
+        verbose_name_plural = 'Amenities'
+    
+    def __str__(self):
+        return self.title
 
 
 class BusinessProfileModel(models.Model):
+    """
+    Business model holds all the Businesses to be registered for app
+
+    """
+
     account = models.OneToOneField(User, on_delete=models.DO_NOTHING)
     business_name = models.CharField(max_length=100,help_text='How people can recognize you?')
     business_description = models.TextField(max_length=2000, blank=True, null=True, help_text='Tell us more about your business...')
     is_verified = models.BooleanField(default=False)
-    thumbnail = models.ImageField(upload_to='thumbnails/images', null=True, blank=True) #TODO: require attention # default='img/profile.png')
+    category = models.ManyToManyField(CategoyModel)
+    thumbnail = ResizedImageField(size=[400, 400], quality=75,
+                                crop=['middle', 'center'],
+                                upload_to='musics/thumbnails',
+                                null=True, blank=True)
+    # thumbnail = models.ImageField(upload_to='thumbnails/images', null=True, blank=True) #TODO: require attention # default='img/profile.png')
     landmark = models.CharField(max_length=200, blank=True, null=True)
     area_local = models.CharField(max_length=200, blank=True, null=True)
     country = models.CharField(max_length=50,default='India')
@@ -36,7 +66,11 @@ class BusinessProfileModel(models.Model):
     registered_on = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(max_length=80, unique=True)
     amenities = models.ManyToManyField(AmenitiesModel,)
-
+    
+    class Meta:
+        verbose_name = 'Business'
+        verbose_name_plural = 'Businesses'
+    
     def save(self, *args, **kwargs):
         self.slug = self.slug or slugify(self.title)
         super().save(*args, **kwargs)
@@ -59,8 +93,14 @@ class OpeningHoursModel(models.Model):
     start_time = models.TimeField()
     end_time = models.TimeField()
 
+    class Meta:
+        verbose_name = 'Opening Hours'
+        verbose_name_plural = 'Opening Hours'
+
+    def __str__(self):
+        return f"{self.business} || {self.get_weekday_display()}"
 class ServiceModel(models.Model):
-    provided_by = models.ManyToManyField(BusinessProfileModel,)
+    provided_by = models.ForeignKey(BusinessProfileModel,on_delete=models.CASCADE)
     service_name = models.CharField(max_length=200, verbose_name='title')
     service_description = models.CharField(max_length=2000, verbose_name='description')
     tag = TaggableManager()
@@ -70,7 +110,11 @@ class ServiceModel(models.Model):
                                 upload_to='musics/thumbnails',)
                                 # default='img/9.jpg') #TODO: default thumbnail to be select
     slug = models.SlugField(max_length=80, unique=True)
-
+    
+    class Meta:
+        verbose_name = 'Service'
+        verbose_name_plural = 'Services'
+    
     def save(self, *args, **kwargs):
         self.slug = self.slug or slugify(self.title)
         super().save(*args, **kwargs)
@@ -92,6 +136,8 @@ class ReviewModel(models.Model):
                         upload_to='musics/thumbnails',
                         null=True, blank=True)
     review_text = models.CharField(max_length=2000,)
-
+    class Meta:
+        verbose_name = 'Review'
+        verbose_name_plural = 'Reviews'
     def __str__(self):
         return f"{self.account} || {self.business}"
