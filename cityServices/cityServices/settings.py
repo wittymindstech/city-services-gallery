@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'taggit',
     'django_social_share',
     'storages',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

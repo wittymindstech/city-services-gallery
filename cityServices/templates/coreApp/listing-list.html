@@ -233,7 +233,7 @@
                 <div class="listing-image bg-overlay-half-bottom h-100">
                   <img class="img-fluid" src="{{ business.thumbnail.url }}" alt="">
                   <div class="listing-quick-box">
-                    <a class="category" href="#"> <i class="flaticon-coffee-cup"></i> {{business.category.name}}</a>
+                    <a class="category" href="#"> <i class="flaticon-coffee-cup"></i> {{business.category.first}}</a>
                     <a class="popup popup-single" href="{{ business.thumbnail.url }}" data-toggle="tooltip" data-placement="top" title="Zoom"> <i class="fas fa-search-plus"></i> </a>
                     <a class="like" href="#" data-toggle="tooltip" data-placement="top" title="Like"> <i class="far fa-heart"></i> </a>
                   </div>
@@ -257,13 +257,7 @@
                   </div>
                   <div class="listing-bottom">
                     <a class="listing-loaction" href="#"> <i class="fas fa-map-marker-alt"></i>{{business.landmark}}, {{business.area_local}}</a>
-                    {% if business.status == 'C' %}
-                      <span class="listing-close">Closed</span>
-                    {% else %}
-                      {% if business.status == 'O' %}
-                      <span class="listing-open">Open</span>
-                      {% endif%}
-                    {% endif%}
+                      <span class="listing-{{business.get_status_display|lower}}">{{business.get_status_display}}</span>
                     </div>
                 </div>
               </div>

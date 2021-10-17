@@ -6,6 +6,8 @@ from coreApp.models import (
     ServiceModel,
     ReviewModel,
     CategoyModel,
+    PreviewImages,
+    Bookings,
 )
 # Register your models here.
 admin.site.register(AmenitiesModel)
@@ -14,3 +16,5 @@ admin.site.register(OpeningHoursModel)
 admin.site.register(ServiceModel)
 admin.site.register(ReviewModel)
 admin.site.register(CategoyModel)
+admin.site.register(PreviewImages)
+admin.site.register(Bookings)

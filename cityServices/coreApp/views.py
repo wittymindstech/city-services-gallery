@@ -1,13 +1,23 @@
 from django.shortcuts import render
+
+from coreApp.serializers import (
+    BusinessSerializer,
+    CategorySerializer,
+    )
+
 from coreApp.models import (
     CategoyModel,
     BusinessProfileModel,
     OpeningHoursModel,
-)
+    )
+
+from rest_framework.views import APIView
+
 # Create your views here.
-def home(request):
+def LandingPageView(request):
     context = {
-        'categories':CategoyModel.objects.all()[0:9]
+        'categories':CategoyModel.objects.all()[0:9],
+        'businesses':BusinessProfileModel.objects.all()[0:9]
     }
     return render(request, 'coreApp/index.html', context)
 

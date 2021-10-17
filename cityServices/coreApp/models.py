@@ -66,7 +66,7 @@ class BusinessProfileModel(models.Model):
     registered_on = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(max_length=80, unique=True)
     amenities = models.ManyToManyField(AmenitiesModel,)
-    status = models.CharField(choices=(('O', 'Open'), ('C', 'Closed'),), max_length=1, default='C')
+    status = models.CharField(choices=(('O', 'Open'), ('C', 'Close'),), max_length=1, default='C')
     class Meta:
         verbose_name = 'Business'
         verbose_name_plural = 'Businesses'
@@ -141,3 +141,25 @@ class ReviewModel(models.Model):
         verbose_name_plural = 'Reviews'
     def __str__(self):
         return f"{self.account} || {self.business}"
+
+class PreviewImages(models.Model):
+    business = models.ForeignKey(BusinessProfileModel, on_delete=models.CASCADE)
+    image = ResizedImageField(size=[700, 415], 
+                        quality=75, crop=['middle', 'center'],
+                        upload_to='musics/thumbnails',
+                        null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Preview Images'
+        verbose_name_plural = 'Preview Images'
+
+
+# TODO: Needs modification
+class Bookings(models.Model):
+    business = models.ForeignKey(BusinessProfileModel, on_delete=models.CASCADE)
+    date = models.DateTimeField()
+    persons = models.PositiveBigIntegerField()
+
+    class Meta:
+        verbose_name = 'Booking'
+        verbose_name_plural = 'Bookings'
