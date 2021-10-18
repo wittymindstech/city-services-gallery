@@ -1,0 +1,308 @@
+{% extends 'coreApp/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="space-ptb bg-light">
+  <div class="container">
+    <div class="row">
+      <!-- FOR LEFT SIDE WIDGET (BLANK FOR adS) -->
+      <div class="col-lg-3">
+        <!-- <div class="sidebar">
+          <div class="widget">
+            <div class="widget-title bg-primary">
+              <h6 class="text-white mb-0"> <i class="fas fa-filter"></i>Filters </h6>
+            </div>
+            <div class="widget-content">
+              <div class="pb-3">
+                <a class="collapse-title" data-toggle="collapse" href="#filters">
+                  Advanced Filters <i class="fas fa-minus-circle"></i>
+                </a>
+                <div class="collapse show" id="filters">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="What are you looking for?">
+                  </div>
+                  <div class="form-group select-border">
+                    <select class="form-control basic-select">
+                      <option>All Categories</option>
+                      <option>Restaurant </option>
+                      <option>Night life </option>
+                      <option>Hotels </option>
+                      <option>Cafe</option>
+                      <option>Club & Bars</option>
+                      <option>Museum</option>
+                    </select>
+                  </div>
+                  <div class="form-group select-border">
+                    <select class="form-control basic-select">
+                      <option>All Cities </option>
+                      <option>London </option>
+                      <option>San francisco </option>
+                      <option>New York </option>
+                      <option>Miami</option>
+                      <option>Mumbai</option>
+                      <option>Delhi</option>
+                    </select>
+                  </div>
+                  <div class="form-group form-icon">
+                    <input type="text" class="form-control" placeholder="Location">
+                    <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="pb-3">
+                <a class="collapse-title" data-toggle="collapse" href="#price">
+                  Price  <i class="fas fa-minus-circle"></i>
+                </a>
+                <div class="collapse show" id="price">
+                 <div class="form-group property-price-slider ">
+                      <label>Select Price Range</label>
+                      <input type="text" id="property-price-slider" name="example_name" value="" />
+                    </div>
+                </div>
+              </div>
+              <div class="pt-0">
+                 <div class="form-group mb-0">
+                    <a class="btn btn-secondary d-block" href="#">Search</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="widget">
+            <div class="widget-title bg-primary">
+              <h6 class="text-white mb-0"> <i class="fas fa-tags"></i>Tags </h6>
+            </div>
+            <div class="widget-content">
+              <div class="custom-control custom-checkbox mb-2">
+                <input type="checkbox" class="custom-control-input" id="checkbox1">
+                <label class="custom-control-label" for="checkbox1">Coupons</label>
+              </div>
+              <div class="custom-control custom-checkbox mb-2">
+                <input type="checkbox" class="custom-control-input" id="checkbox2">
+                <label class="custom-control-label" for="checkbox2">Bike Parking</label>
+              </div>
+              <div class="custom-control custom-checkbox mb-2">
+                <input type="checkbox" class="custom-control-input" id="checkbox3">
+                <label class="custom-control-label" for="checkbox3">Accepts Credit Cards</label>
+              </div>
+              <div class="custom-control custom-checkbox mb-2">
+                <input type="checkbox" class="custom-control-input" id="checkbox4">
+                <label class="custom-control-label" for="checkbox4">Street Parking</label>
+              </div>
+              <div class="custom-control custom-checkbox mb-2">
+                <input type="checkbox" class="custom-control-input" id="checkbox5">
+                <label class="custom-control-label" for="checkbox5">Cable TV</label>
+              </div>
+              <div class="custom-control custom-checkbox mb-2">
+                <input type="checkbox" class="custom-control-input" id="checkbox6">
+                <label class="custom-control-label" for="checkbox6">Wireless Internet</label>
+              </div>
+              <div class="custom-control custom-checkbox mb-2">
+                <input type="checkbox" class="custom-control-input" id="checkbox7">
+                <label class="custom-control-label" for="checkbox7">Kitchen</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="checkbox8">
+                <label class="custom-control-label" for="checkbox8">Parking</label>
+              </div>
+            </div>
+          </div>
+          <div class="widget">
+            <div class="widget-title bg-primary">
+              <h6 class="text-white mb-0"> <i class="fas fa-star"></i> Ratings </h6>
+            </div>
+            <div class="widget-content">
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="checkbox9">
+                <label class="custom-control-label d-flex" for="checkbox9">
+                  <span class="px-2 border text-success border-radius d-inline-block mr-2">5.0</span>
+                  <strong class="d-flex mb-0">
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                  </strong>
+                </label>
+              </div>
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="checkbox10">
+                <label class="custom-control-label d-flex" for="checkbox10">
+                  <span class="px-2 border text-success border-radius d-inline-block mr-2">4.0</span>
+                  <strong class="d-flex mb-0">
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                  </strong>
+                </label>
+              </div>
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="checkbox11">
+                <label class="custom-control-label d-flex" for="checkbox11">
+                  <span class="px-2 border text-success border-radius d-inline-block mr-2">3.0</span>
+                  <strong class="d-flex mb-0">
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                  </strong>
+                </label>
+              </div>
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="checkbox12">
+                <label class="custom-control-label d-flex" for="checkbox12">
+                  <span class="px-2 border text-success border-radius d-inline-block mr-2">2.0</span>
+                  <strong class="d-flex mb-0">
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                  </strong>
+                </label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="checkbox13">
+                <label class="custom-control-label d-flex" for="checkbox13">
+                  <span class="px-2 border text-success border-radius d-inline-block mr-2">1.5</span>
+                  <strong class="d-flex mb-0">
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                    <span><i class="fas fa-star text-warning"></i></span>
+                  </strong>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+
+      <div class="col-lg-9 mt-4 mt-lg-0">
+        <div class="row mb-4">
+          <div class="col-12">
+            <h6 class="mb-0">Showing 1-5 of <span class="text-primary">28 listing</span></h6>
+          </div>
+        </div>
+        <div class="property-filter d-sm-flex mb-4 pt-4 pt-sm-0">
+          <ul class="property-short list-unstyled d-sm-flex mb-0">
+            <li>
+              <form class="form-inline">
+                <div class="form-group d-sm-flex d-block">
+                  <label class="justify-content-start">Short by:</label>
+                  <div class="short-by">
+                    <select class="form-control basic-select">
+                      <option>Date new to old</option>
+                      <option>Price Low to High</option>
+                      <option>Price High to Low</option>
+                      <option>Date Old to New</option>
+                      <option>Date New to Old</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
+            </li>
+          </ul>
+          <ul class="property-view-list list-unstyled d-flex mb-0">
+            <li>
+              <form class="form-inline">
+                <!-- <div class="form-group d-sm-flex d-block">
+                  <label class="justify-content-start pr-2">Sort by: </label>
+                  <div class="short-by">
+                    <select class="form-control select">
+                      <option>12</option>
+                      <option>18 </option>
+                      <option>24 </option>
+                      <option>64 </option>
+                      <option>128</option>
+                    </select>
+                  </div>
+                </div> -->
+              </form>
+            </li>
+          </ul>
+        </div>
+        {% for business in businesses %}
+          <div class="listing-item listing-list mb-4">
+            <div class="row no-gutters">
+              <div class="col-lg-4 col-md-5">
+                <div class="listing-image bg-overlay-half-bottom h-100">
+                  <img class="img-fluid" src="{{ business.thumbnail.url }}" alt="">
+                  <div class="listing-quick-box">
+                    <a class="category" href="#"> <i class="flaticon-coffee-cup"></i> {{business.category.first}}</a>
+                    <a class="popup popup-single" href="{{ business.thumbnail.url }}" data-toggle="tooltip" data-placement="top" title="Zoom"> <i class="fas fa-search-plus"></i> </a>
+                    <a class="like" href="#" data-toggle="tooltip" data-placement="top" title="Like"> <i class="far fa-heart"></i> </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-8 col-md-7">
+                <div class="listing-details h-100">
+                  <div class="listing-details-inner">
+                    <div class="listing-title">
+                      <h6><a href="{% url 'coreApp:detail_view' slug=business.slug %}">{{ business.business_name }}</a></h6>
+                      <!-- <span class="listing-price">$$$</span> -->
+                    </div>
+                    <div class="listing-rating-call">
+                      <a class="listing-rating" href="#"><span>4.2</span> 12 Rating</a>
+                      <a class="listing-call" href="#"><i class="fas fa-phone-volume"></i> {{business.mobile}}</a>
+                    </div>
+                    <div class="listing-info">
+                      <img class="img-fluid" src="{{ business.thumbnail.url }}" alt="" width="70%">
+                      <p class="mb-0">{{ business.business_description }}</p>
+                    </div>
+                  </div>
+                  <div class="listing-bottom">
+                    <a class="listing-loaction" href="#"> <i class="fas fa-map-marker-alt"></i>{{business.landmark}}, {{business.area_local}}</a>
+                      <span class="listing-{{business.get_status_display|lower}}">{{business.get_status_display}}</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        <div class="row">
+          <div class="col-12">
+            <ul class="pagination mt-5">
+              <li class="page-item disabled mr-auto">
+                <span class="page-link b-radius-none">Prev</span>
+              </li>
+              <li class="page-item" aria-current="page"><span class="page-link">1</li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item ml-auto">
+                <a class="page-link b-radius-none" href="#">Next</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      {% comment %}
+      {% if page_obj.has_other_pages %}
+      <ul class="pagination">
+        {% if page_obj.has_previous %}
+          <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+       {% endif %}
+
+        {% for i in page_obj.paginator.page_range %}
+          {% if page_obj.number == i %}
+            <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+          {% else %}
+            <li><a href="?page={{ i }}">{{ i }}</a></li>
+          {% endif %}
+        {% endfor %}
+        {% if page_obj.has_next %}
+          <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+        {% endif %}
+      </ul>
+    {% endif %}
+      {% endcomment %}
+    </div>
+    </div>
+
+</section>
+
+{% endblock %}

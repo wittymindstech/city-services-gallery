@@ -1,0 +1,160 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Directro - Directory and Listing Template" />
+    <meta name="author" content="potenzaglobalsolutions.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Directro - Directory and Listing Template</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap">
+
+    <!-- CSS Global Compulsory (Do not remove)-->
+    <link rel="stylesheet" href="{% static 'coreApp/css/font-awesome/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'coreApp/css/flaticon/flaticon.css' %}" />
+    <link rel="stylesheet" href="{% static 'coreApp/css/bootstrap/bootstrap.min.css' %}" />
+
+    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+    <link rel="stylesheet" href="{% static 'coreApp/css/select2/select2.css' %}" />
+    <link rel="stylesheet" href="{% static 'coreApp/css/owl-carousel/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'coreApp/css/magnific-popup/magnific-popup.css' %}" />
+    <link rel="stylesheet" href="{% static 'coreApp/css/range-slider/ion.rangeSlider.css' %}" />
+
+    <!-- Template Style -->
+    <link rel="stylesheet" href="{% static 'coreApp/css/style.css' %}" />
+
+    {% block extracss %}
+    {% endblock %}
+  </head>
+
+<body>
+
+{% include 'coreApp/header.html' %}
+
+{% block content %}
+{% endblock %}
+
+<!--=================================
+footer-->
+<footer class="footer border-top space-ptb">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="footer-contact-info">
+             <a href="index.html"><img class="img-fluid footer-logo" src="{% static 'coreApp/images/logo.svg' %}" alt="logo"></a>
+            <div class="contact-address mt-5 mr-5 pr-5">
+              <div class="contact-item">
+                <p class="font-weight-normal">6580 Allison Turnpike Creminfort, AL 32808</p>
+              </div>
+              <div class="contact-item">
+                <h4 class="mb-0"><a href="#">+(704) 279-1249</a></h4>
+              </div>
+              <div class="contact-item mt-4">
+                <a class="text-dark" href="#">letstalk@directro.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4  mb-4 mb-lg-0">
+          <h5 class="text-primary mb-2 mb-sm-4">IT Services</h5>
+          <div class="footer-link">
+            <ul class="list-unstyled mb-0">
+              <li><a href="#">Data Synchronization</a></li>
+              <li><a href="#">Content Management</a></li>
+              <li><a href="#">Content Delivery</a></li>
+              <li><a href="#">Transaction Processing</a></li>
+              <li><a href="#">Process Automation</a></li>
+            </ul>
+            <ul class="list-unstyled mb-0">
+              <li><a href="#">Event Processing</a></li>
+              <li><a href="#">Information Security</a></li>
+              <li><a href="#">Mobile Platforms</a></li>
+              <li><a href="#">Communications</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-2 mb-4 mb-lg-0">
+          <h5 class="text-primary mb-2 mb-sm-4">Company</h5>
+          <div class="footer-link">
+            <ul class="list-unstyled mb-0">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Leadership Team</a></li>
+              <li><a href="#">IT Blog</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Locations</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-2 mb-4 mb-sm-0">
+          <h5 class="text-primary mb-2 mb-sm-4">Support</h5>
+          <div class="footer-link">
+            <ul class="list-unstyled mb-0">
+              <li><a href="#">Forum Support</a></li>
+              <li><a href="#">Help &amp; FAQs</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Pricing And Plans</a></li>
+              <li><a href="#">Cookies Policy</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+       <div class="row align-items-center mt-lg-5 mt-0 pt-lg-4 pt-0">
+        <div class="col-md-7 mt-4 mt-sm-0 text-md-left text-center">
+          <ul class="list-unstyled mb-0 social-icon">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fab fa-github"></i></a></li>
+            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+            <li><a href="#"><i class="fab fa-behance"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-5 text-md-right text-center mt-4 mt-md-0">
+          <p class="mb-0">©Copyright 2020 <a href="index.html">Directro</a> All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--=================================
+  footer-->
+  
+  <!--=================================
+  Back To Top-->
+  
+   <div id="back-to-top" class="back-to-top">
+    <a href="#"> <i class="fas fa-angle-up"></i></a>
+   </div>
+  
+  <!--=================================
+  Back To Top-->
+  
+  <!--=================================
+  Javascript -->
+  
+    <!-- JS Global Compulsory (Do not remove)-->
+    <script src="{% static 'coreApp/js/jquery-3.5.1.min.js' %}"></script>
+    <script src="{% static 'coreApp/js/popper/popper.min.js' %}"></script>
+    <script src="{% static 'coreApp/js/bootstrap/bootstrap.min.js' %}"></script>
+  
+    <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+    {% block extrastatic %}
+    {% endblock %}
+    <script src="{% static 'coreApp/js/select2/select2.full.js' %}"></script>
+    <script src="{% static 'coreApp/js/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'coreApp/js/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'coreApp/js/range-slider/ion.rangeSlider.min.js' %}"></script>
+    <!-- Template Scripts (Do not remove)-->
+    <script src="{% static 'coreApp/js/custom.js' %}"></script>
+  
+  </body>
+  </html>
+  
